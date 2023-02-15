@@ -1,0 +1,11 @@
+C:\Users\A/.ssh/id_rsa
+
+SHA256:GPuLzwlX/ItWICV4JKw1VVb0OAq/XkouAg4eCycF7To a@DESKTOP-N55DKI7
+
+
+
+Your public key has been saved in /c/Users/A/.ssh/id_ed25519.pub
+
+
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEFXLOpiT/skJrWAq4JteeJHy7+xbI+OsHGm/1BGS+xI giovanibenvenutti2010@hotmail.com
+
