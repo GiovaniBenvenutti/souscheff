@@ -27,8 +27,8 @@ public class Receita implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Receita:\t\t" + nome + ", \nrefeição:\t\t" + refeição + ", \ningredientes:\t\t" + ingredientes
-				+ ", \nmodoDePreparo: \t" + modoDePreparo;
+		return "Receita:\t\t" + nome + ", \nRefeição:\t\t" + refeição + ", \nIngredientes:\t\t" + ingredientes
+				+ ", \nModo de preparo: \t" + modoDePreparo;
 	}
 
 	public String getNome() {

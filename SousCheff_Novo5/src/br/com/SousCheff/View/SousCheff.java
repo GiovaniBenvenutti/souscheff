@@ -71,7 +71,7 @@ public class SousCheff extends JFrame {
 		lblNewLabel.setBounds(10, 11, 710, 40);
 		contentPane.add(lblNewLabel);
 
-		JLabel lblNewLabel_1 = new JLabel("escolha uma refeiçao para receber sugestões");
+		JLabel lblNewLabel_1 = new JLabel("Escolha uma refeição para receber sugestões");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1.setBounds(10, 47, 710, 25);
