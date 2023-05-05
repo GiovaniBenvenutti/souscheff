@@ -169,6 +169,13 @@ public class ViewCrud extends JFrame {
 		panel.add(chckbxDiversos);
 
 		btnNovaReceita.setBounds(35, 50, 128, 23);
+		
+		SetViewCrud.resetTela(btnNovaReceita, btnEditaReceita, btnSalvaReceita, btnExcluirReceita,
+				btnPesquisar, textNomeReceita, textIngredientes, textFieldModoPreparo, chckbxAlmSeg,
+				chckbxJanSeg, chckbxAlmTer, chckbxJanTer, chckbxAlmQua, chckbxJanQua, chckbxAlmQui,
+				chckbxJanQui, chckbxAlmSex, chckbxJanSex, chckbxAlmSab, chckbxJanSab, chckbxAlmDom,
+				chckbxJanDom, chckbxSobremesa, chckbxDiversos);
+		
 		contentPaneSelecionaRefeições.add(btnNovaReceita);
 		btnNovaReceita.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

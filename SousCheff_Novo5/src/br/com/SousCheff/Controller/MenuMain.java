@@ -279,7 +279,7 @@ public class MenuMain {
 			}
 		}
 		if (existe == false) {
-			JOptionPane.showMessageDialog(null, " Receita não existe ");
+			JOptionPane.showMessageDialog(null, " Receita não encontrada ");
 		}
 		existe = false;
 	}
@@ -316,6 +316,10 @@ public class MenuMain {
 			JCheckBox chckbxJanQuinta, JCheckBox chckbxJanSexta, JCheckBox chckbxJanSbado, JCheckBox chckbxJanDomingo,
 			JCheckBox chckbxSobremesa, JCheckBox chckbxDiversos) {
 		String sugestao = "\n	    Sugestões de Receitas: \n\n";
+		String sugestaoAlm = "";
+		String sugestaoJan = "";
+		String sugestaoOut = "";
+
 		String refeicao = "";
 
 		if (chckbxAlmSeg.isSelected() == false && chckbxAlmTer.isSelected() == false
@@ -329,86 +333,98 @@ public class MenuMain {
 			sugestao = "Selecione alguma refeição para receber sugestões.";
 
 		} else {
-			if (chckbxAlmSeg.isSelected()) {
-				refeicao = "AlmSeg";
-				sugestao += ("	Almoço de segunda-feira:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
-			}
-
-			if (chckbxAlmTer.isSelected()) {
-				refeicao = "AlmTer";
-				sugestao += ("	Almoço de Terça-feira:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
-			}
-
-			if (chckbxAlmQua.isSelected()) {
-				refeicao = "AlmQua";
-				sugestao += ("	Almoço de Quarta-feira:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
-			}
-
-			if (chckbxAlmQui.isSelected()) {
-				refeicao = "AlmQui";
-				sugestao += ("	Almoço de Quinta-feira:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
-			}
-
-			if (chckbxAlmSex.isSelected()) {
-				refeicao = "AlmSex";
-				sugestao += ("	Almoço de Sexta-feira:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
-			}
-
-			if (chckbxAlmSab.isSelected()) {
-				refeicao = "AlmSab";
-				sugestao += ("	Almoço de Sábado:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
-			}
-
-			if (chckbxAlmDom.isSelected()) {
-				refeicao = "AlmDom";
-				sugestao += ("	Almoço de Domingo:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
-			}
-
-			if (chckbxJanSeg.isSelected()) {
-				refeicao = "JanSeg";
-				sugestao += ("	Jantar de Segunda-feira:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
-			}
-
-			if (chckbxJanTerça.isSelected()) {
-				refeicao = "JanTer";
-				sugestao += ("	Jantar de Terça-feira:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
-			}
-
-			if (chckbxJanQuarta.isSelected()) {
-				refeicao = "JanQua";
-				sugestao += ("	Jantar de Quarta-feira:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
-			}
-
-			if (chckbxJanQuinta.isSelected()) {
-				refeicao = "JanQui";
-				sugestao += ("	Jantar de Quinta-feira:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
-			}
-
-			if (chckbxJanSexta.isSelected()) {
-				refeicao = "JanSex";
-				sugestao += ("	Jantar de Sexta-feira:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
-			}
-
-			if (chckbxJanSbado.isSelected()) {
-				refeicao = "JanSab";
-				sugestao += ("	Jantar de Sabado:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
-			}
-
-			if (chckbxJanDomingo.isSelected()) {
-				refeicao = "JanDom";
-				sugestao += ("	Jantar de Domingo:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
-			}
 
 			if (chckbxSobremesa.isSelected()) {
 				refeicao = "Sobremesa";
-				sugestao += ("	Sobremesa:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
+				sugestaoOut += ("	Sobremesa:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
 			}
 
 			if (chckbxDiversos.isSelected()) {
 				refeicao = "Diversos";
-				sugestao += ("	Diversos:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
+				sugestaoOut += ("	Diversos:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
 			}
 
+			if (chckbxJanSeg.isSelected()) {
+				refeicao = "JanSeg";
+				sugestaoJan += ("	Jantar de Segunda-feira:   "
+						+ (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
+			}
+
+			if (chckbxJanTerça.isSelected()) {
+				refeicao = "JanTer";
+				sugestaoJan += ("	Jantar de Terça-feira:   "
+						+ (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
+			}
+
+			if (chckbxJanQuarta.isSelected()) {
+				refeicao = "JanQua";
+				sugestaoJan += ("	Jantar de Quarta-feira:   "
+						+ (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
+			}
+
+			if (chckbxJanQuinta.isSelected()) {
+				refeicao = "JanQui";
+				sugestaoJan += ("	Jantar de Quinta-feira:   "
+						+ (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
+			}
+
+			if (chckbxJanSexta.isSelected()) {
+				refeicao = "JanSex";
+				sugestaoJan += ("	Jantar de Sexta-feira:   "
+						+ (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
+			}
+
+			if (chckbxJanSbado.isSelected()) {
+				refeicao = "JanSab";
+				sugestaoJan += ("	Jantar de Sabado:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
+			}
+
+			if (chckbxJanDomingo.isSelected()) {
+				refeicao = "JanDom";
+				sugestaoJan += ("	Jantar de Domingo:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
+			}
+
+			if (chckbxAlmSeg.isSelected()) {
+				refeicao = "AlmSeg";
+				sugestaoAlm += ("	Almoço de segunda-feira:   "
+						+ (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
+			}
+
+			if (chckbxAlmTer.isSelected()) {
+				refeicao = "AlmTer";
+				sugestaoAlm += ("	Almoço de Terça-feira:   "
+						+ (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
+			}
+
+			if (chckbxAlmQua.isSelected()) {
+				refeicao = "AlmQua";
+				sugestaoAlm += ("	Almoço de Quarta-feira:   "
+						+ (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
+			}
+
+			if (chckbxAlmQui.isSelected()) {
+				refeicao = "AlmQui";
+				sugestaoAlm += ("	Almoço de Quinta-feira:   "
+						+ (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
+			}
+
+			if (chckbxAlmSex.isSelected()) {
+				refeicao = "AlmSex";
+				sugestaoAlm += ("	Almoço de Sexta-feira:   "
+						+ (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
+			}
+
+			if (chckbxAlmSab.isSelected()) {
+				refeicao = "AlmSab";
+				sugestaoAlm += ("	Almoço de Sábado:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
+			}
+
+			if (chckbxAlmDom.isSelected()) {
+				refeicao = "AlmDom";
+				sugestaoAlm += ("	Almoço de Domingo:   " + (pesquisaPorRefeição(lista, sugestao, refeicao) + "\n"));
+			}
+
+			sugestao += sugestaoAlm + sugestaoJan + sugestaoOut;
 		}
 
 		return sugestao;
@@ -434,10 +450,10 @@ public class MenuMain {
 				}
 			}
 		}
-		
+
 		if (temp.isEmpty()) {
-			Receita r = new Receita("Cadastreuma receita para esta refeição", "","","");
-			temp.add(r);			
+			Receita r = new Receita("Cadastreuma receita para esta refeição", "", "", "");
+			temp.add(r);
 		}
 
 		Random r = new Random();
