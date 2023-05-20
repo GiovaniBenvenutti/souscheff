@@ -14,6 +14,15 @@ import br.com.SousCheff.Model.GravaReceita;
 import br.com.SousCheff.Model.LeReceita;
 import br.com.SousCheff.Model.Leitura;
 
+/*
+ * 	projeto criado por Giovani Benvenutti
+ * 
+ * 	SousCheff tem o propósito de suprir uma necessidade cotidiana de pessoas que tm dificuldade na
+ *  hora de planejar um cardápio semanal que contemple de modo consistnte um sorteio aleatório entre
+ *  uma lista de receitas conhcidas 
+ * 
+ */
+
 public class MenuMain {
 	private static Leitura l = new Leitura();
 	private static List<Receita> lista = new ArrayList<Receita>();
@@ -452,7 +461,7 @@ public class MenuMain {
 		}
 
 		if (temp.isEmpty()) {
-			Receita r = new Receita("Cadastreuma receita para esta refeição", "", "", "");
+			Receita r = new Receita("Cadastre uma receita para esta refeição", "", "", "");
 			temp.add(r);
 		}
 

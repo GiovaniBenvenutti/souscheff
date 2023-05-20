@@ -1,6 +1,5 @@
 package br.com.SousCheff.View;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -11,10 +10,6 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Image;
-import java.io.File;
-import java.io.IOException;
 
 public class VerListaCompleta extends JFrame {
 
@@ -45,12 +40,12 @@ public class VerListaCompleta extends JFrame {
 	 * Create the frame.
 	 */
 	public VerListaCompleta() {
-	    setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-	    setBounds(100, 100, 788, 494);
-	    contentPane = new ImagePanel(ImagePanel.enderecoImagem);
-	    contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-	    setContentPane(contentPane);
-	    contentPane.setLayout(null);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setBounds(100, 100, 788, 494);
+		contentPane = new ImagePanel(ImagePanel.enderecoImagem);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);

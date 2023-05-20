@@ -14,7 +14,8 @@ class ImagePanel extends JPanel {
 	 */
 	private static final long serialVersionUID = 1L;
 	private BufferedImage image;
-	public static String enderecoImagem = "C:\\Users\\User\\eclipse-workspace-SousCheff\\SousCheff_6\\src\\br\\com\\SousCheff\\Model\\fundo.jpg";
+	public static String enderecoImagem = "C:\\Users\\User\\eclipse-workspace-SousCheff\\SousCheff_6\\src\\br\\com\\SousCheff\\Model\\fundo.png";
+
 	public ImagePanel(String imagePath) {
 		try {
 			image = ImageIO.read(new File(enderecoImagem));

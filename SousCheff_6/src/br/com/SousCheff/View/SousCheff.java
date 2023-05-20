@@ -207,6 +207,12 @@ public class SousCheff extends JFrame {
 		btnVerReceitas.setBounds(568, 10, 156, 26);
 		panel_2.add(btnVerReceitas);
 
+		textFieldExibeSugestões = new JTextField();
+		textFieldExibeSugestões.setHorizontalAlignment(SwingConstants.LEFT);
+		textFieldExibeSugestões.setBounds(10, 194, 751, 232);
+		contentPane.add(textFieldExibeSugestões);
+		textFieldExibeSugestões.setColumns(10);
+
 		JButton btnVerIngredientes = new JButton("Ver Escolhas");
 		btnVerIngredientes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -214,11 +220,17 @@ public class SousCheff extends JFrame {
 				ve.setVisible(true);
 				LeReceita lr = new LeReceita();
 				lista = lr.LeArquivoObj();
-				VerEscolhas.exibeReceitasEscolhidas
-						.setText(MenuMain.buscaSugestão(lista, chckbxAlmSeg, chckbxAlmTer, chckbxAlmQua, chckbxAlmQui,
-								chckbxAlmSex, chckbxAlmSab, chckbxAlmDom, chckbxJanSeg, chckbxJanTerça, chckbxJanQuarta,
-								chckbxJanQuinta, chckbxJanSexta, chckbxJanSbado, chckbxJanDomingo, chckbxSobremesa,
-								chckbxDiversos) + "\n\n" + MenuMain.receitasEscolhidas(lista, textAreaTexto.getText()));
+				VerEscolhas.exibeReceitasEscolhidas.setText(
+						textAreaTexto.getText() + "\n\n" + MenuMain.receitasEscolhidas(lista, textAreaTexto.getText()));
+
+				/*
+				 * .setText("\n" + MenuMain.buscaSugestão(lista, chckbxAlmSeg, chckbxAlmTer,
+				 * chckbxAlmQua, chckbxAlmQui, chckbxAlmSex, chckbxAlmSab, chckbxAlmDom,
+				 * chckbxJanSeg, chckbxJanTerça, chckbxJanQuarta, chckbxJanQuinta,
+				 * chckbxJanSexta, chckbxJanSbado, chckbxJanDomingo, chckbxSobremesa,
+				 * chckbxDiversos) + "\n\n" + MenuMain.receitasEscolhidas(lista,
+				 * textAreaTexto.getText()));
+				 */
 
 			}
 		});
@@ -235,12 +247,6 @@ public class SousCheff extends JFrame {
 		});
 		btnListaReceitas.setBounds(387, 10, 156, 26);
 		panel_2.add(btnListaReceitas);
-
-		textFieldExibeSugestões = new JTextField();
-		textFieldExibeSugestões.setHorizontalAlignment(SwingConstants.LEFT);
-		textFieldExibeSugestões.setBounds(10, 194, 751, 232);
-		contentPane.add(textFieldExibeSugestões);
-		textFieldExibeSugestões.setColumns(10);
 
 	}
 }
